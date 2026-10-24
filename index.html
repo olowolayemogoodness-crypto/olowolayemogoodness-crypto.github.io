@@ -207,6 +207,15 @@ h1,h2,h3{margin:0; text-wrap:balance}
 .mail button,.gh{height:46px; padding:0 20px; border-radius:999px; border:0; background:#111; color:#fff; font:600 15px var(--sans); cursor:pointer; text-decoration:none; display:inline-flex; align-items:center}
 .gh{background:transparent; border:1.5px solid #5A5C62; color:#EDEDEA; margin-left:10px; margin-top:34px; vertical-align:top}
 .gh:hover{border-color:#EDEDEA}
+.socials{display:flex; gap:12px; margin-top:22px; flex-wrap:wrap}
+.soc{width:56px; height:56px; border-radius:50%; display:grid; place-items:center; color:#fff; text-decoration:none; transition:transform .35s var(--ease), box-shadow .35s var(--ease); position:relative}
+.soc svg{width:26px; height:26px}
+.soc:hover{transform:translateY(-4px) rotate(-6deg); box-shadow:0 14px 28px -14px rgba(0,0,0,.7)}
+.soc.wa{background:#25D366}
+.soc.ig{background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)}
+.soc.gh2{background:#EDEDEA; color:#111}
+.soc span{position:absolute; bottom:calc(100% + 10px); left:50%; transform:translate(-50%,6px); background:#fff; color:#111; font:600 12px var(--sans); padding:4px 9px; border-radius:7px; white-space:nowrap; opacity:0; pointer-events:none; transition:all .25s var(--ease)}
+.soc:hover span,.soc:focus-visible span{opacity:1; transform:translate(-50%,0)}
 .foot{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:110px; padding-top:22px; border-top:1px solid #34353B; font-size:13.5px; color:#8E9096}
 
 /* ============ RESPONSIVE ============ */
@@ -532,7 +541,12 @@ h1,h2,h3{margin:0; text-wrap:balance}
   <div class="inner">
     <h2><span>Let's</span><span class="o">build</span><span>something.</span></h2>
     <p class="sub">Open to internships, freelance mobile work, hackathon teams and collaborations, especially on products for students and everyday Nigerian life.</p>
-    <div><span class="mail"><code id="email">olowolayemogoodness@gmail.com</code><button type="button" id="copy">Copy</button></span><a class="gh" href="https://github.com/olowolayemogoodness-crypto" target="_blank" rel="noopener">GitHub ↗</a></div>
+    <div><span class="mail"><code id="email">olowolayemogoodness@gmail.com</code><button type="button" id="copy">Copy</button></span></div>
+    <div class="socials">
+      <a class="soc wa" id="waLink" href="#contact" target="_blank" rel="noopener" aria-label="Message me on WhatsApp"><span>WhatsApp</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 01-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 01-1.45-5.03c0-5.21 4.24-9.45 9.46-9.45 2.53 0 4.9.99 6.69 2.77a9.4 9.4 0 012.77 6.69c0 5.21-4.24 9.45-9.44 9.45zm8.04-17.49A11.3 11.3 0 0012.04.68C5.77.68.66 5.79.66 12.06c0 2 .52 3.96 1.52 5.69L.57 23.32l5.7-1.5a11.36 11.36 0 005.43 1.38h.01c6.27 0 11.38-5.1 11.38-11.38 0-3.04-1.18-5.9-3.33-8.05z"/></svg></a>
+      <a class="soc ig" href="https://www.instagram.com/so_re001/" target="_blank" rel="noopener" aria-label="Instagram"><span>Instagram</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38A5.88 5.88 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 00-1.38-2.13A5.88 5.88 0 0019.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg></a>
+      <a class="soc gh2" href="https://github.com/olowolayemogoodness-crypto" target="_blank" rel="noopener" aria-label="GitHub"><span>GitHub</span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+    </div>
     <div class="foot"><span>© 2026 Goodness Olowolayemo</span><span>Edulink · Blink · GO · Ecograph · Hustle · Ajo</span></div>
   </div>
 </section>
@@ -649,6 +663,12 @@ h1,h2,h3{margin:0; text-wrap:balance}
   drawAjo();
   function autoAjo(){ if(reduce) return; clearInterval(at); at=setInterval(function(){ if(!document.hidden){ round=(round+1)%6; drawAjo() } },2600) }
   document.getElementById('nextRound').addEventListener('click',function(){ round=(round+1)%6; drawAjo(); autoAjo() }); autoAjo();
+
+  /* ===== WhatsApp: the number is never written on the page; the link is put together when tapped ===== */
+  var wa=document.getElementById('waLink');
+  function waHref(){ var p=['23','48','14','40','91','758']; return 'https://wa.me/'+p.join('')+'?text='+encodeURIComponent('Hi Goodness, I saw your portfolio and would love to chat.') }
+  ['pointerdown','focus','keydown'].forEach(function(ev){ wa.addEventListener(ev,function(){ wa.href=waHref() }) });
+  wa.addEventListener('click',function(){ wa.href=waHref() });
 
   /* ===== copy email ===== */
   var btn=document.getElementById('copy');
