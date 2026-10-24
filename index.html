@@ -216,6 +216,14 @@ h1,h2,h3{margin:0; text-wrap:balance}
 .soc.gh2{background:#EDEDEA; color:#111}
 .soc span{position:absolute; bottom:calc(100% + 10px); left:50%; transform:translate(-50%,6px); background:#fff; color:#111; font:600 12px var(--sans); padding:4px 9px; border-radius:7px; white-space:nowrap; opacity:0; pointer-events:none; transition:all .25s var(--ease)}
 .soc:hover span,.soc:focus-visible span{opacity:1; transform:translate(-50%,0)}
+.contracts{display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:70px; padding:28px clamp(22px,3vw,40px); border-radius:28px; background:#F07F2C; color:#15110B; text-decoration:none; position:relative; overflow:hidden; transition:transform .4s var(--ease)}
+.contracts:hover{transform:translateY(-4px) rotate(-.4deg)}
+.contracts .t{font-family:var(--mega); font-size:clamp(48px,7vw,110px); line-height:.9; text-transform:uppercase}
+.contracts .d{font-size:clamp(15px,1.4vw,18px); max-width:34ch; margin-top:10px; font-weight:500}
+.contracts .arr{width:clamp(64px,7vw,96px); height:clamp(64px,7vw,96px); flex:none; border-radius:50%; background:#15110B; color:#F07F2C; display:grid; place-items:center; transition:transform .5s var(--ease)}
+.contracts:hover .arr{transform:rotate(-45deg)}
+.contracts .arr svg{width:42%; height:42%}
+.contracts .hand{font-family:var(--hand); font-size:16px; display:inline-block; transform:rotate(-3deg)}
 .foot{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:110px; padding-top:22px; border-top:1px solid #34353B; font-size:13.5px; color:#8E9096}
 
 /* ============ RESPONSIVE ============ */
@@ -274,7 +282,7 @@ h1,h2,h3{margin:0; text-wrap:balance}
     <div class="a-bar">
       <span class="nm">Goodness Olowolayemo</span>
       <hr>
-      <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a href="contracts.html">Contracts</a></nav>
     </div>
     <div class="a-grid">
       <div class="quote">
@@ -547,6 +555,7 @@ h1,h2,h3{margin:0; text-wrap:balance}
       <a class="soc ig" href="https://www.instagram.com/so_re001/" target="_blank" rel="noopener" aria-label="Instagram"><span>Instagram</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38A5.88 5.88 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 00-1.38-2.13A5.88 5.88 0 0019.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg></a>
       <a class="soc gh2" href="https://github.com/olowolayemogoodness-crypto" target="_blank" rel="noopener" aria-label="GitHub"><span>GitHub</span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
     </div>
+    <a class="contracts" href="contracts.html"><div><span class="hand">hire me for →</span><div class="t">Contracts</div><p class="d">Web development, full-stack and app store deployment, maintenance, and tech guidance.</p></div><span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     <div class="foot"><span>© 2026 Goodness Olowolayemo</span><span>Edulink · Blink · GO · Ecograph · Hustle · Ajo</span></div>
   </div>
 </section>

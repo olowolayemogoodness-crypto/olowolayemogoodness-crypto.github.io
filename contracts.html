@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contracts · Goodness Olowolayemo</title>
+<meta name="description" content="Hire Goodness Olowolayemo for web development, full-stack deployment and maintenance, iOS and Android app store releases, and tech guidance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&family=Geist:wght@300;400;500;600;700&family=Permanent+Marker&display=swap">
+<style>
+/* Layout: charcoal hero with a cursor-reactive dot field and a giant "CONTRACTS" -> four service rows in bold colour -> how we work (a real sequence) -> loud CTA. Same look as the main portfolio. */
+:root{
+  color-scheme:light;
+  --char:#1E1F23; --paper:#FFFFFF; --ink:#111214; --muted:#5E6168; --line:#E4E4E2;
+  --sans:"Geist","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --mega:"Anton","Impact","Arial Narrow Bold",sans-serif;
+  --hand:"Architects Daughter","Comic Neue","Marker Felt",cursive;
+  --brush:"Permanent Marker","Marker Felt",cursive;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased}
+main{overflow-x:clip}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0; text-wrap:balance}
+:focus-visible{outline:2px solid #F07F2C; outline-offset:3px; border-radius:6px}
+.gut{padding-left:max(20px, env(safe-area-inset-left, 0px)); padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.inner{max-width:1240px; margin:0 auto}
+.progress{position:fixed; inset:0 0 auto; height:3px; background:#F07F2C; transform-origin:0 50%; transform:scaleX(0); z-index:50}
+@supports (animation-timeline: scroll()){ .progress{animation:grow linear both; animation-timeline:scroll(root)} }
+@keyframes grow{to{transform:scaleX(1)}}
+
+/* hero */
+.hero{position:relative; background:var(--char); color:#EDEDEA; overflow:hidden; padding-block:calc(env(safe-area-inset-top, 0px) + 26px) 70px}
+#dots{position:absolute; inset:0; width:100%; height:100%; display:block}
+.hero .inner{position:relative; z-index:1}
+.bar{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap}
+.bar a{text-decoration:none}
+.back{display:inline-flex; align-items:center; gap:8px; font-weight:500; color:#A5A7AD}
+.back:hover{color:#fff}
+.back svg{width:18px; height:18px; transition:transform .3s var(--ease)}
+.back:hover svg{transform:translateX(-4px)}
+.bar .nm{font-weight:600; color:#EDEDEA}
+.hero .eyebrow{font-family:var(--hand); font-size:clamp(18px,2vw,24px); color:#F07F2C; margin-top:90px; transform:rotate(-2deg); display:inline-block}
+.hero h1{font-family:var(--mega); font-weight:400; font-size:clamp(90px,19vw,300px); line-height:.82; text-transform:uppercase; letter-spacing:.005em; margin-top:10px}
+.hero h1 .w{display:inline-block; animation:rise 1s var(--ease) both}
+@keyframes rise{from{transform:translateY(40px); opacity:.1; filter:blur(8px)} to{transform:none; opacity:1; filter:none}}
+.hero .lede{max-width:44ch; font-size:clamp(18px,1.7vw,21px); color:#C9CACE; margin-top:28px; animation:rise 1s .12s var(--ease) both}
+.hero .lede b{color:#fff; font-weight:600}
+.chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:30px; animation:rise 1s .2s var(--ease) both}
+.chip{font-family:var(--mega); font-size:15px; letter-spacing:.06em; text-transform:uppercase; padding:8px 14px 7px; border-radius:999px; transform:rotate(-2deg); box-shadow:0 6px 0 rgba(0,0,0,.25)}
+.chip:nth-child(1){background:#F07F2C; color:#15110B}
+.chip:nth-child(2){background:#fff; color:#111; transform:rotate(2deg)}
+.chip:nth-child(3){background:#7B5CFF; color:#fff; transform:rotate(-1deg)}
+.chip:nth-child(4){background:#25D366; color:#0B2A17; transform:rotate(3deg)}
+
+/* marquee */
+.mq{background:var(--ink); color:#fff; padding-block:20px; overflow:hidden; border-top:1px solid #2C2D33}
+.mq .row{display:flex; white-space:nowrap; will-change:transform}
+.mq .row span{font-family:var(--mega); font-size:clamp(46px,7vw,104px); line-height:1; padding-right:.35em; text-transform:uppercase}
+.mq .row span i{font-style:normal; color:#F07F2C; padding:0 .2em}
+
+/* services */
+.svc-h{padding-block:110px 40px}
+.svc-h h2{font-family:var(--mega); font-weight:400; font-size:clamp(60px,10vw,150px); line-height:.86; text-transform:uppercase}
+.svc-h h2 em{font-style:normal; font-family:var(--hand); font-size:.2em; color:#1B3A8A; text-transform:none; display:inline-block; transform:rotate(-5deg); margin-left:.3em; vertical-align:top}
+.svc-h p{color:var(--muted); max-width:52ch; margin-top:18px}
+
+.svc{color:var(--fg); background:var(--bg); border-radius:34px; margin:0 auto 18px; max-width:1320px; overflow:hidden; position:relative}
+.svc .sin{display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:56px; padding:56px clamp(22px,4vw,64px) 60px}
+.svc .top{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+.svc .ico{width:52px; height:52px; border-radius:15px; display:grid; place-items:center; background:var(--fg); color:var(--bg)}
+.svc .ico svg{width:26px; height:26px}
+.svc .tagx{font-family:var(--hand); font-size:16px; opacity:.8}
+.svc h3{font-family:var(--mega); font-weight:400; text-transform:uppercase; font-size:clamp(46px,5.6vw,84px); line-height:.9; margin-top:22px; overflow-wrap:anywhere; letter-spacing:.005em}
+.svc .say{font-size:clamp(17px,1.5vw,19px); line-height:1.6; margin-top:20px; max-width:50ch; opacity:.9}
+.svc .say b{font-weight:650}
+.svc ul{list-style:none; margin:0; padding:0; display:grid; gap:0; align-content:start}
+.svc li{display:grid; grid-template-columns:30px minmax(0,1fr); gap:10px; padding:13px 0; border-top:1px solid color-mix(in srgb, var(--fg) 20%, transparent); font-size:15.5px; line-height:1.45}
+.svc li:first-child{border-top:0}
+.svc li::before{content:"✓"; font-weight:700; color:var(--ac)}
+.svc .proof{margin-top:22px; padding:16px 18px; border-radius:18px; background:color-mix(in srgb, var(--fg) 9%, transparent); font-size:14.5px; line-height:1.5}
+.svc .proof .k{font-family:var(--hand); font-size:15px; display:block; opacity:.8; margin-bottom:2px}
+.svc .ask{display:inline-flex; align-items:center; gap:8px; margin-top:24px; height:46px; padding:0 20px; border-radius:999px; border:1.5px solid var(--fg); color:var(--fg); background:transparent; font:600 15px var(--sans); text-decoration:none; cursor:pointer; transition:background .3s var(--ease), color .3s var(--ease), transform .3s var(--ease)}
+.svc .ask:hover{background:var(--fg); color:var(--bg); transform:translateY(-2px)}
+.svc .big{position:absolute; right:-0.04em; bottom:-0.2em; font-family:var(--mega); font-size:clamp(160px,24vw,360px); line-height:1; opacity:.07; pointer-events:none; text-transform:uppercase}
+@supports (animation-timeline: view()){
+  .svc{animation:lift linear both; animation-timeline:view(); animation-range:entry 0% cover 30%}
+  @keyframes lift{from{transform:translateY(70px) scale(.96)} to{transform:none}}
+  .svc .big{animation:drift linear both; animation-timeline:view(); animation-range:entry 0% exit 100%}
+  @keyframes drift{from{transform:translateX(10%)} to{transform:translateX(-12%)}}
+}
+
+/* how we work */
+.how{padding-block:120px 60px}
+.how h2{font-family:var(--mega); font-weight:400; text-transform:uppercase; font-size:clamp(54px,8vw,120px); line-height:.88}
+.steps{list-style:none; margin:50px 0 0; padding:0; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:0; counter-reset:s; border-top:2px solid var(--ink)}
+.steps li{padding:22px 20px 0 0; counter-increment:s; position:relative}
+.steps li::before{content:counter(s,decimal-leading-zero); display:block; font-family:var(--mega); font-size:54px; line-height:1; color:var(--ink)}
+.steps li::after{content:""; position:absolute; top:-7px; left:0; width:12px; height:12px; border-radius:50%; background:#F07F2C}
+.steps b{display:block; font-size:18px; margin-top:12px}
+.steps span{display:block; color:var(--muted); font-size:15px; margin-top:4px; line-height:1.5}
+.how .note{font-family:var(--hand); font-size:18px; color:#1B3A8A; margin-top:44px; display:flex; gap:10px; align-items:center}
+.how .note svg{width:60px; height:30px; flex:none}
+
+/* cta */
+.cta{background:var(--char); color:#EDEDEA; padding-block:120px 40px; margin-top:80px}
+.cta .mk{font-family:var(--brush); font-size:clamp(110px,14vw,200px); line-height:.5; display:block; height:.5em; transform:rotate(-5deg); color:#F07F2C}
+.cta h2{font-family:var(--mega); font-weight:400; text-transform:uppercase; font-size:clamp(64px,12vw,190px); line-height:.86; margin-top:40px}
+.cta h2 .o{color:transparent; -webkit-text-stroke:2px #EDEDEA}
+.cta p{color:#A5A7AD; max-width:48ch; margin-top:24px}
+.btns{display:flex; gap:12px; flex-wrap:wrap; margin-top:34px}
+.btn{display:inline-flex; align-items:center; gap:10px; height:54px; padding:0 24px; border-radius:999px; font:600 16px var(--sans); text-decoration:none; border:0; cursor:pointer; transition:transform .3s var(--ease), box-shadow .3s var(--ease)}
+.btn:hover{transform:translateY(-3px); box-shadow:0 16px 30px -16px rgba(0,0,0,.7)}
+.btn svg{width:22px; height:22px}
+.btn.wa{background:#25D366; color:#0B2A17}
+.btn.ml{background:#fff; color:#111}
+.btn.ig{background:transparent; color:#EDEDEA; border:1.5px solid #5A5C62}
+.mailrow{margin-top:18px; font-size:14.5px; color:#8E9096}
+.mailrow code{font-family:var(--sans); color:#EDEDEA; user-select:all}
+.foot{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:100px; padding-top:22px; border-top:1px solid #34353B; font-size:13.5px; color:#8E9096}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff}
+
+@media (max-width: 960px){
+  .svc .sin{grid-template-columns:1fr; gap:30px}
+  .steps{grid-template-columns:1fr 1fr; row-gap:34px}
+  .svc{border-radius:26px; margin-left:12px; margin-right:12px}
+}
+@media (max-width: 560px){
+  body{font-size:16px}
+  .hero .eyebrow{margin-top:60px}
+  .steps{grid-template-columns:1fr}
+  .svc{margin-left:8px; margin-right:8px}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important; transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<main>
+
+<section class="hero gut">
+  <canvas id="dots" aria-hidden="true"></canvas>
+  <div class="inner">
+    <div class="bar">
+      <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Back to portfolio</a>
+      <span class="nm">Goodness Olowolayemo</span>
+    </div>
+    <p class="eyebrow">work with me →</p>
+    <h1><span class="w">Contracts</span></h1>
+    <p class="lede">I take on contract work for founders, small businesses, students and teams. <b>I build it, ship it to where people can use it, and keep it running.</b></p>
+    <div class="chips"><span class="chip">Web development</span><span class="chip">Deployment</span><span class="chip">iOS + Android stores</span><span class="chip">Tech guidance</span></div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true">
+  <div class="row" id="mqRow"><span>Build it<i>✺</i>Ship it<i>✺</i>Keep it running<i>✺</i>Get it in the stores<i>✺</i></span><span>Build it<i>✺</i>Ship it<i>✺</i>Keep it running<i>✺</i>Get it in the stores<i>✺</i></span></div>
+</div>
+
+<section class="svc-h gut">
+  <div class="inner">
+    <h2>What I<br>can do<em>(for you)</em></h2>
+    <p>Four kinds of work. Each one lists what you get and where I've already done it on my own products.</p>
+  </div>
+</section>
+
+<!-- 1 WEB -->
+<article class="svc" style="--bg:#1B3A8A; --fg:#FFFFFF; --ac:#F07F2C">
+  <div class="sin">
+    <div>
+      <div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="15" rx="2.5"/><path d="M2.5 8.5h19M9 13.5l-2 1.5 2 1.5M15 13.5l2 1.5-2 1.5"/></svg></span><span class="tagx">websites &amp; web apps</span></div>
+      <h3>Web<br>development</h3>
+      <p class="say">From a landing page for your business to a full web app with sign-in and a database. <b>Fast, clean, and built to work well on phones</b>, since that's where most of your visitors are.</p>
+      <div class="proof"><span class="k">where I've done it</span>The Edulink web app and its download page at joinedulink.com, and this portfolio.</div>
+      <a class="ask" href="#talk" data-wa="I'd like a website or web app built.">Talk about a website ↗</a>
+    </div>
+    <ul>
+      <li>Landing pages, portfolios and business websites</li>
+      <li>Web apps with accounts, dashboards and payments</li>
+      <li>Designs that work on phones first, then desktop</li>
+      <li>Animations and polish that make people stay</li>
+      <li>Search-friendly pages and fast loading on slow networks</li>
+    </ul>
+  </div>
+  <span class="big" aria-hidden="true">Web</span>
+</article>
+
+<!-- 2 FULL STACK -->
+<article class="svc" style="--bg:#0E0B18; --fg:#F3F1FF; --ac:#8B6CFF">
+  <div class="sin">
+    <div>
+      <div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6"/></svg></span><span class="tagx">put it online, keep it online</span></div>
+      <h3>Full-stack<br>deployment &amp;<br>maintenance</h3>
+      <p class="say">Have an app that works on your laptop but not on the internet? <b>I set up the hosting, the database, the domain and the security, then I keep it updated and running</b> so you don't wake up to a broken site.</p>
+      <div class="proof"><span class="k">where I've done it</span>Edulink runs on Firebase with Cloud Functions, Cloudflare Workers and its own domain. Ecograph is deployed on Render with Docker.</div>
+      <a class="ask" href="#talk" data-wa="I need help deploying or maintaining a web app.">Talk about deployment ↗</a>
+    </div>
+    <ul>
+      <li>Hosting on Firebase, Render, Cloudflare and similar</li>
+      <li>Custom domains, DNS and secure https</li>
+      <li>Databases, sign-in and security rules (Firebase, Supabase)</li>
+      <li>Server functions, push notifications and file uploads</li>
+      <li>Monthly maintenance: updates, fixes, backups and checks</li>
+    </ul>
+  </div>
+  <span class="big" aria-hidden="true">Ship</span>
+</article>
+
+<!-- 3 MOBILE -->
+<article class="svc" style="--bg:#E8891A; --fg:#15110B; --ac:#15110B">
+  <div class="sin">
+    <div>
+      <div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg></span><span class="tagx">into the App Store &amp; Google Play</span></div>
+      <h3>Mobile app<br>deployment &amp;<br>maintenance</h3>
+      <p class="say">Getting an app into the stores is its own job: signing, store listings, screenshots, privacy pages, content ratings and review rejections. <b>I take your iOS and Android app all the way into the App Store and Google Play</b>, then ship your updates.</p>
+      <div class="proof"><span class="k">where I've done it</span>Edulink is live on Google Play, and I've taken it through Apple's App Store review, including answering their rejection notes.</div>
+      <a class="ask" href="#talk" data-wa="I want my app published on the App Store / Google Play.">Talk about your app ↗</a>
+    </div>
+    <ul>
+      <li>Release builds for iOS and Android, signed correctly</li>
+      <li>Store listings, screenshots and feature graphics</li>
+      <li>Privacy policy pages and data safety forms</li>
+      <li>Content rating answers and handling review rejections</li>
+      <li>Updates, push notifications and crash fixes after launch</li>
+    </ul>
+  </div>
+  <span class="big" aria-hidden="true">Apps</span>
+</article>
+
+<!-- 4 RESEARCH -->
+<article class="svc" style="--bg:#E4EFD9; --fg:#13301A; --ac:#2F7A22">
+  <div class="sin">
+    <div>
+      <div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20.5 20.5l-4.8-4.8M8.5 11h5M11 8.5v5"/></svg></span><span class="tagx">someone to think it through with</span></div>
+      <h3>Research &amp;<br>tech guidance</h3>
+      <p class="say">Not sure what to build, which tools to use, or why something keeps breaking? <b>I help you research it, plan it and make good technical decisions</b>, in plain language, whether you're a founder, a student or a new developer.</p>
+      <div class="proof"><span class="k">where I've done it</span>Four hackathon builds, from an AI agent on a graph database to a commitment app with AI photo checks, each planned and written up from scratch.</div>
+      <a class="ask" href="#talk" data-wa="I'd like some tech guidance / research help.">Talk it through ↗</a>
+    </div>
+    <ul>
+      <li>Choosing the right tech stack and tools for your idea</li>
+      <li>Product plans and requirement documents you can hand to a team</li>
+      <li>Code reviews, debugging and fixing stubborn problems</li>
+      <li>Hackathon and project guidance for students</li>
+      <li>One-on-one sessions for new developers</li>
+    </ul>
+  </div>
+  <span class="big" aria-hidden="true">Think</span>
+</article>
+
+<section class="how gut">
+  <div class="inner">
+    <h2>How we<br>work together</h2>
+    <ol class="steps">
+      <li><b>Message me</b><span>On WhatsApp or email. Tell me what you have and what you need.</span></li>
+      <li><b>We scope it</b><span>We agree on exactly what will be done, so there are no surprises.</span></li>
+      <li><b>Quote &amp; timeline</b><span>You get a clear price and dates before any work starts.</span></li>
+      <li><b>I build or ship it</b><span>With regular updates you can see and test as I go.</span></li>
+      <li><b>Handover &amp; care</b><span>You get everything you need, plus an optional maintenance plan.</span></li>
+    </ol>
+    <p class="note"><svg viewBox="0 0 60 30" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 22 C 18 4, 34 28, 54 8"/><path d="M45 7 L55 8 L52 18"/></svg>pricing depends on the job, so every contract is quoted on its own.</p>
+  </div>
+</section>
+
+<section class="cta gut" id="talk">
+  <div class="inner">
+    <span class="mk" aria-hidden="true">“</span>
+    <h2>Got a<br><span class="o">project?</span><br>Let's talk.</h2>
+    <p>Send a message with a few lines about your project, and we'll take it from there.</p>
+    <div class="btns">
+      <a class="btn wa" id="waBtn" href="#talk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 01-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 01-1.45-5.03c0-5.21 4.24-9.45 9.46-9.45 2.53 0 4.9.99 6.69 2.77a9.4 9.4 0 012.77 6.69c0 5.21-4.24 9.45-9.44 9.45zm8.04-17.49A11.3 11.3 0 0012.04.68C5.77.68.66 5.79.66 12.06c0 2 .52 3.96 1.52 5.69L.57 23.32l5.7-1.5a11.36 11.36 0 005.43 1.38h.01c6.27 0 11.38-5.1 11.38-11.38 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Chat on WhatsApp</a>
+      <button class="btn ml" type="button" id="copyMail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Copy my email</span></button>
+      <a class="btn ig" href="https://www.instagram.com/so_re001/" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+    <p class="mailrow">Email: <code id="email">olowolayemogoodness@gmail.com</code></p>
+    <div class="foot"><span>© 2026 Goodness Olowolayemo</span><a href="index.html">← Back to the portfolio</a></div>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+  var reduce=false; try{ reduce=matchMedia('(prefers-reduced-motion: reduce)').matches }catch(e){}
+
+  /* dot field that ripples away from the cursor */
+  var cv=document.getElementById('dots'), ctx=cv.getContext('2d'), hero=cv.parentNode, W,H,DPR,pts=[], mx=-999,my=-999, vis=true;
+  function lay(){ DPR=Math.min(devicePixelRatio||1,2); W=hero.clientWidth; H=hero.clientHeight; cv.width=W*DPR; cv.height=H*DPR; pts=[]; var g=W<600?22:28;
+    for(var y=g/2;y<H;y+=g) for(var x=g/2;x<W;x+=g) pts.push({x:x,y:y,ox:x,oy:y,s:Math.random()}) }
+  function draw(t){
+    ctx.setTransform(DPR,0,0,DPR,0,0); ctx.clearRect(0,0,W,H); ctx.fillStyle='rgba(237,237,234,.22)'; ctx.beginPath();
+    for(var i=0;i<pts.length;i++){ var p=pts[i], dx=p.ox-mx, dy=p.oy-my, d=Math.sqrt(dx*dx+dy*dy), f=d<140? (1-d/140)*26 : 0;
+      var tx=p.ox+(d?dx/d*f:0), ty=p.oy+(d?dy/d*f:0)+Math.sin((t||0)/1400+p.s*6)*1.2; p.x+=(tx-p.x)*.12; p.y+=(ty-p.y)*.12;
+      var r=1+(f/26)*1.6; ctx.rect(p.x-r/2,p.y-r/2,r,r) }
+    ctx.fill(); if(vis && !reduce) requestAnimationFrame(draw) }
+  lay(); requestAnimationFrame(draw); addEventListener('resize',function(){ lay(); if(reduce) draw(0) });
+  hero.addEventListener('pointermove',function(e){ var r=cv.getBoundingClientRect(); mx=e.clientX-r.left; my=e.clientY-r.top });
+  hero.addEventListener('pointerleave',function(){ mx=my=-999 });
+  try{ new IntersectionObserver(function(es){ var v=es[0].isIntersecting; if(v&&!vis&&!reduce){ vis=true; requestAnimationFrame(draw) } vis=v }).observe(hero) }catch(e){}
+
+  /* marquee, faster when scrolling */
+  var row=document.getElementById('mqRow'), x=0, lastY=scrollY, vel=0;
+  addEventListener('scroll',function(){ vel=scrollY-lastY; lastY=scrollY },{passive:true});
+  function mq(){ var w=row.firstElementChild.offsetWidth||1; x-= 0.7+Math.min(12,Math.abs(vel))*0.5; if(x<-w) x+=w; row.style.transform='translateX('+x.toFixed(1)+'px)'; vel*=.92; requestAnimationFrame(mq) }
+  if(!reduce) requestAnimationFrame(mq);
+
+  /* WhatsApp: the number is never shown on the page; the link is built when tapped */
+  function waHref(topic){ var p=['23','48','14','40','91','758']; return 'https://wa.me/'+p.join('')+'?text='+encodeURIComponent('Hi Goodness, I found your contracts page. '+(topic||'I have a project I\'d like to discuss.')) }
+  var wa=document.getElementById('waBtn');
+  ['pointerdown','focus','keydown','click'].forEach(function(ev){ wa.addEventListener(ev,function(){ wa.href=waHref() }) });
+  [].slice.call(document.querySelectorAll('[data-wa]')).forEach(function(a){
+    a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    ['pointerdown','focus','keydown','click'].forEach(function(ev){ a.addEventListener(ev,function(){ a.href=waHref(a.dataset.wa) }) });
+  });
+
+  /* copy email */
+  var cb=document.getElementById('copyMail'), lbl=cb.querySelector('span');
+  cb.addEventListener('click',function(){ var el=document.getElementById('email');
+    function sel(){ var r=document.createRange(); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r); lbl.textContent='Email selected' }
+    try{ navigator.clipboard.writeText(el.textContent).then(function(){ lbl.textContent='Email copied'; setTimeout(function(){ lbl.textContent='Copy my email' },1800) }, sel) }catch(e){ sel() } });
+})();
+</script>
+</body>
+</html>
